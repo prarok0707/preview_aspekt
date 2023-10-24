@@ -11144,6 +11144,145 @@ body > .os-scrollbar {
     height: 35px;
 }
 
+.table-flex__button-remove {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.table-flex__button-remove svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: #2b356d;
+    transition: fill 0.2s linear;
+}
+
+@media (any-hover: hover) {
+    .table-flex__button-remove:hover svg {
+        fill: #c64692;
+    }
+}
+
+@media (min-width: 768px) {
+    .table-flex__button-remove {
+        flex: 0 0 25px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.table-flex__tab-actions {
+    margin: 20px 0 0 0;
+    display: grid;
+    gap: 15px;
+}
+
+.table-flex__tab-action {
+    display: flex;
+    align-items: center;
+}
+
+.table-flex__tab-action .table-flex__tab-button {
+    margin: 0 20px 0 0;
+}
+
+.table-flex__tab-action .table-flex__tab-text {
+    margin: 0 40px 0 0;
+}
+
+.table-flex__tab-button {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    transition: border 0.2s linear;
+}
+
+.table-flex__tab-button span {
+    flex: 0 0 13px;
+    width: 13px;
+    height: 13px;
+    display: block;
+    position: relative;
+}
+
+.table-flex__tab-button span::before, .table-flex__tab-button span::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #a8a8a8;
+    border-radius: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    transition: transform 0.2s linear, background 0.2s linear;
+}
+
+.table-flex__tab-button span::after {
+    transform: rotate(90deg);
+}
+
+.table-flex__tab-button.active span::after {
+    transform: rotate(90deg) scale(0);
+}
+
+@media (any-hover: hover) {
+    .table-flex__tab-button:hover {
+        border-color: #c64692;
+    }
+
+    .table-flex__tab-button:hover span::before,
+  .table-flex__tab-button:hover span::after {
+        background: #c64692;
+    }
+}
+
+.table-flex__tab-text {
+    flex: 0 1 24em;
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2b356d;
+}
+
+.table-flex__tab-text span {
+    padding: 0 1em 0 0;
+}
+
+.table-flex__tab-text strong {
+    margin: 0 0 0 auto;
+}
+
+@media (min-width: 768px) {
+    .table-flex__tab-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .table-flex__tab-text {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1610px) {
+    .table-flex__tab-text {
+        font-size: 1.25rem;
+    }
+}
+
 .tables-mobile_sm .table-mobile__wrapper, .tables-mobile_lg .table-mobile__wrapper, .tables-mobile_xl .table-mobile__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -11504,6 +11643,101 @@ body > .os-scrollbar {
 
 .mobile-cards__value {
     text-align: right;
+}
+
+.mobile-cards__button-remove {
+    flex: 0 0 25px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.mobile-cards__button-remove svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: #2b356d;
+}
+
+.mobile-cards__tab-actions {
+    margin: 0 0 20px 0;
+    padding: 10px 0 0 0;
+    display: grid;
+    gap: 10px;
+}
+
+.mobile-cards__tab-action {
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    grid-template-columns: 25px 1fr 25px;
+    gap: 0 10px;
+}
+
+.mobile-cards__tab-action:last-child {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+@media (min-width: 450px) {
+    .mobile-cards__tab-action {
+        grid-template-columns: 25px auto 25px;
+    }
+}
+
+.mobile-cards__tab-button {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    transition: border 0.2s linear;
+}
+
+.mobile-cards__tab-button span {
+    flex: 0 0 11px;
+    width: 11px;
+    height: 11px;
+    display: block;
+    position: relative;
+}
+
+.mobile-cards__tab-button span::before, .mobile-cards__tab-button span::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #a8a8a8;
+    border-radius: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    transition: transform 0.2s linear, background 0.2s linear;
+}
+
+.mobile-cards__tab-button span::after {
+    transform: rotate(90deg);
+}
+
+.mobile-cards__tab-button.active span::after {
+    transform: rotate(90deg) scale(0);
+}
+
+.mobile-cards__tab-status,
+.mobile-cards__tab-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2b356d;
+}
+
+.mobile-cards__tab-text {
+    grid-column: 2/3;
 }
 
 .learns-groups__container {
@@ -11962,21 +12196,23 @@ body > .os-scrollbar {
     color: #2b356d;
 }
 
-.student-final-grades__footer {
-    max-width: 350px;
-}
-
 .student-final-grades__footer .select {
     margin: 0 0 30px 0;
 }
 
 @media (min-width: 1610px) {
-    .student-final-grades__footer {
-        max-width: 440px;
-    }
-
     .student-final-grades__footer .select {
         margin: 0 0 40px 0;
+    }
+}
+
+.student-final-grades__footer-body {
+    max-width: 350px;
+}
+
+@media (min-width: 1610px) {
+    .student-final-grades__footer-body {
+        max-width: 440px;
     }
 }
 
@@ -12002,6 +12238,59 @@ body > .os-scrollbar {
 @media (min-width: 768px) {
     .student-final-grades__done {
         margin: 0 15px 0 0;
+    }
+}
+
+.student-final-grades__buttons {
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+}
+
+.student-final-grades__buttons .button {
+    flex: 0 1 50%;
+}
+
+.student-final-grades__buttons .button:not(:last-child) {
+    margin: 0 5px 0 0;
+}
+
+@media (min-width: 768px) {
+    .student-final-grades__buttons .button:not(:last-child) {
+        margin: 0 10px 0 0;
+    }
+}
+
+@media (min-width: 1610px) {
+    .student-final-grades__buttons {
+        max-width: 620px;
+    }
+
+    .student-final-grades__buttons .button:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+}
+
+.student-final-grades__footer-actions {
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+    border-top: 1px solid #cccccc;
+}
+
+.student-final-grades__footer-actions .student-final-grades__buttons {
+    max-width: 380px;
+    min-height: 40px;
+}
+
+@media (min-width: 1610px) {
+    .student-final-grades__footer-actions {
+        padding: 30px 0 0 0;
+        margin: 30px 0 0 0;
+    }
+
+    .student-final-grades__footer-actions .student-final-grades__buttons {
+        max-width: 476px;
+        min-height: 50px;
     }
 }
 
@@ -12853,7 +13142,7 @@ body > .os-scrollbar {
     cursor: pointer;
 }
 
-.group-student__table-flex .table-flex__row.active .table-flex__cell[data-setting-row=name] {
+.group-student__table-flex .table-flex__row.active .table-flex__cell {
     color: #c64692;
 }
 
@@ -13170,23 +13459,38 @@ body > .os-scrollbar {
 .group-student-swapper__body {
     padding: 10px;
     margin: 0 0 30px 0;
-    display: grid;
-    gap: 20px;
     border-radius: 10px;
     border: 1px solid #cccccc;
-}
-
-@media (min-width: 768px) {
-    .group-student-swapper__body {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
 }
 
 @media (min-width: 992px) {
     .group-student-swapper__body {
         padding: 20px;
         border-radius: 15px;
+    }
+}
+
+.group-student-swapper__groups {
+    display: grid;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .group-student-swapper__groups {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+.group-student-swapper__group:first-child {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+@media (min-width: 768px) {
+    .group-student-swapper__group:first-child {
+        padding: 0;
+        border-bottom: none;
     }
 }
 

@@ -10941,6 +10941,145 @@ body > .os-scrollbar {
     height: 35px;
 }
 
+.table-flex__button-remove {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.table-flex__button-remove svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: #2b356d;
+    transition: fill 0.2s linear;
+}
+
+@media (any-hover: hover) {
+    .table-flex__button-remove:hover svg {
+        fill: #c64692;
+    }
+}
+
+@media (min-width: 768px) {
+    .table-flex__button-remove {
+        flex: 0 0 25px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.table-flex__tab-actions {
+    margin: 20px 0 0 0;
+    display: grid;
+    gap: 15px;
+}
+
+.table-flex__tab-action {
+    display: flex;
+    align-items: center;
+}
+
+.table-flex__tab-action .table-flex__tab-button {
+    margin: 0 20px 0 0;
+}
+
+.table-flex__tab-action .table-flex__tab-text {
+    margin: 0 40px 0 0;
+}
+
+.table-flex__tab-button {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    transition: border 0.2s linear;
+}
+
+.table-flex__tab-button span {
+    flex: 0 0 13px;
+    width: 13px;
+    height: 13px;
+    display: block;
+    position: relative;
+}
+
+.table-flex__tab-button span::before, .table-flex__tab-button span::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #a8a8a8;
+    border-radius: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    transition: transform 0.2s linear, background 0.2s linear;
+}
+
+.table-flex__tab-button span::after {
+    transform: rotate(90deg);
+}
+
+.table-flex__tab-button.active span::after {
+    transform: rotate(90deg) scale(0);
+}
+
+@media (any-hover: hover) {
+    .table-flex__tab-button:hover {
+        border-color: #c64692;
+    }
+
+    .table-flex__tab-button:hover span::before,
+  .table-flex__tab-button:hover span::after {
+        background: #c64692;
+    }
+}
+
+.table-flex__tab-text {
+    flex: 0 1 24em;
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2b356d;
+}
+
+.table-flex__tab-text span {
+    padding: 0 1em 0 0;
+}
+
+.table-flex__tab-text strong {
+    margin: 0 0 0 auto;
+}
+
+@media (min-width: 768px) {
+    .table-flex__tab-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .table-flex__tab-text {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1610px) {
+    .table-flex__tab-text {
+        font-size: 1.25rem;
+    }
+}
+
 .tables-mobile_sm .table-mobile__wrapper, .tables-mobile_lg .table-mobile__wrapper, .tables-mobile_xl .table-mobile__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
